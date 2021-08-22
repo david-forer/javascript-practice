@@ -28,7 +28,7 @@ body {
 
 .container {
    display:flex;
-    height: 500px;
+    height: 50%;
     width: 70%;
     max-width: 1440px;
     padding: 20px;
@@ -51,7 +51,7 @@ body {
     display:flex;
     flex-direction: column;
     width: 50%;
-    padding: 20px
+    padding: 20px;
 }
 
 .form-header {
@@ -71,8 +71,18 @@ body {
     text-align: center;
 }
 
+.top:hover {
+    color: hsl(248, 32%, 49%);
+
+}
+
+.form-header:hover {
+background-color: hsl(245, 25%, 91%);
+}
+
 .form-main {
     display: flex;
+    flex-direction:column;
     border-radius: 7px;
     padding: 30px;
     background-color: white;
@@ -80,8 +90,29 @@ body {
     
 }
 
-input {
+.form-control {
     margin-bottom: 20px;
+    position: relative;
+}
+
+.form-control small {
+    color: red;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error input {
+    border-color: red;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+input {
+    margin-bottom: 5px;
     padding: 10px;
     width: 100%;
     padding: 12px;
@@ -101,6 +132,15 @@ input {
     width: 100%;
     color: white;
     border-style: none;
+    cursor: pointer;
 }
 
+.btn:hover {
+    background-color:hsl(154, 68%, 24%)
+}
 
+.terms {
+    display: flex;
+    font-size: 8px;
+    padding-top: 5px;
+}
