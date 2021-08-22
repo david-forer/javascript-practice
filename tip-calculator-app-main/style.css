@@ -46,6 +46,7 @@
   text-align: right;
   font-size: 14px;
   font-weight: 600;
+  border-radius: 4px;
 }
 
 .tip-buttons {
@@ -64,6 +65,10 @@
   font-weight: 800;
 }
 
+.button:active {
+  background-color: #26c0ab;
+}
+
 .input-people {
   padding: 5px;
   width: 80%;
@@ -72,6 +77,12 @@
   text-align: right;
   font-size: 14px;
   font-weight: 600;
+  border-radius: 4px;
+}
+
+input:focus {
+  border: 2px solid #09474b;
+  outline: none;
 }
 
 .right-container {
