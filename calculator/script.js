@@ -1,32 +1,31 @@
-let display = document.getElementById('display');
+let display = document.getElementById("display");
 
-let buttons = Array.from(document.getElementsByClassName('calc-buttons'));
+let buttons = Array.from(document.getElementsByClassName("calc-buttons"));
 
-buttons.map( button => {
-  button.addEventListener('click', (e) => {
-    switch(e.target.innerText){
-      case 'C':
-        display.innerText = '';
+buttons.map((button) => {
+  button.addEventListener("click", (e) => {
+    switch (e.target.innerText) {
+      case "C":
+        display.innerText = "";
         break;
-      case 'DEL':
-        if(display.innerText){
-          display.innerText = display.innerText.slice(0, -1)
+      case "DEL":
+        if (display.innerText) {
+          display.innerText = display.innerText.slice(0, -1);
         }
         break;
-      case '=':
-        try{
+      case "=":
+        try {
           display.innerText = eval(display.innerText);
-      } catch {
-          display.innerText = "Error"
-      }
+        } catch {
+          display.innerText = "Error";
+        }
         break;
       default:
-                display.innerText += e.target.innerText;
+        display.innerText += e.target.innerText;
     }
     // console.log('clicked');
     // console.log(e);
-    console.log(e.target);
-    console.log(e.target.innerText)
-  })
-})
-console.log(buttons)
+    // console.log(e.target);
+    console.log(e.target.innerText);
+  });
+});
