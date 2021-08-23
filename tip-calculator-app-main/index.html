@@ -20,16 +20,21 @@
         <div class="left-container">
           <div class="top">
             <h3>Bill</h3>
-            <input type="number" id="bill" class="input-bill" />
+            <input
+              type="number"
+              id="billAmount"
+              class="input-bill"
+              placeholder="30.00"
+            />
           </div>
           <div class="middle">
             <h3>Select Tip %</h3>
             <div class="tip-buttons">
-              <button class="button">5%</button>
-              <button class="button">10%</button>
-              <button class="button">15%</button>
-              <button class="button">25%</button>
-              <button class="button">50%</button>
+              <button class="button" id="tipAmount" onclick="tip5()">5%</button>
+              <button class="button" id="tipAmount" onclick="tip10()">10%</button>
+              <button class="button" id="tipAmount" onclick="tip15()">15%</button>
+              <button class="button" id="tipAmount" onclick="tip25()" >25%</button>
+              <button class="button" id="tipAmount" onclick="tip50()" >50%</button>
               <button class="custom-button">Custom</button>
             </div>
           </div>
@@ -42,14 +47,14 @@
           <div id="tip-amount">
             <h3>Tip Amount</h3>
             <p>/ person</p>
-            <h1 id="tip-person">$<span id="tip">0.00</span></h1>
+            <h1 id="tip-person">$<input id="tip" class="tippy" placeholder='0.00' /></h1>
           </div>
           <div id="total">
             <h3>Total</h3>
             <p>/ person</p>
-            <h1 id="total-person">$<span id="total-amount">0.00</span></h1>
+            <h1 id="total-person">$<input id="total-amount" class="total-per" placeholder="0.00"></input></h1>
           </div>
-          <button id="reset"class="reset-btn" >RESET</button>
+          <button id="reset" class="reset-btn">RESET</button>
         </div>
       </div>
     </div>
