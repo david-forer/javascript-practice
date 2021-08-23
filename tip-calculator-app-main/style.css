@@ -70,6 +70,26 @@
   background-color: #26c0ab;
 }
 
+.custom-button {
+  background-color: #26c0ab;
+  border: none;
+  border-radius: 4px;
+}
+
+.btn-input {
+  color: #00494d;
+  background-color: #26c0ab;
+  font-size: 20px;
+  font-weight: 700;
+  border: transparent;
+  width: 100px;
+outline: none;
+}
+
+.btn-input::placeholder {
+  color: #09474b;
+}
+
 .input-people {
   padding: 5px;
   width: 80%;
@@ -84,6 +104,7 @@
 input:focus {
   border: 2px solid #09474b;
   outline: none;
+  border: none;
 }
 
 .right-container {
