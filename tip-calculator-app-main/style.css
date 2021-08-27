@@ -70,20 +70,18 @@
   background-color: #26c0ab;
 }
 
-.custom-button {
-  background-color: #26c0ab;
-  border: none;
-  border-radius: 4px;
-}
+
 
 .btn-input {
   color: #00494d;
   background-color: #26c0ab;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   border: transparent;
-  width: 100px;
-outline: none;
+  max-width: 100px;
+  outline: none;
+  border-radius: 4px;
+  text-align: center;
 }
 
 .btn-input::placeholder {
@@ -108,7 +106,7 @@ input:focus {
 }
 
 .right-container {
-  padding: 30px;
+  padding: 35px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -128,9 +126,9 @@ input:focus {
 .right-container h1 {
   color: #26c0ab;
   font-weight: 700;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   position: relative;
-  left: 65%;
+  left: 60%;
   bottom: 50%;
 }
 
@@ -146,13 +144,14 @@ input:focus {
 }
 
 .tippy {
-background-color: #00494d;
-color: #26c0ab;
-width: 80px;
-border: none;
-font-size: 24px;
-font-weight: 700;
-margin: 5px;
+  background-color: #00494d;
+  color: #26c0ab;
+  max-width: 85px;
+  border: none;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 5px;
+  overflow: hidden;
 }
 
 .tippy::placeholder {
@@ -161,12 +160,13 @@ margin: 5px;
 
 .total-per {
   background-color: #00494d;
-color: #26c0ab;
-width: 80px;
-border: none;
-font-size: 24px;
-font-weight: 700;
-margin: 5px;
+  color: #26c0ab;
+  max-width: 85px;
+  overflow: hidden;
+  border: none;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 5px;
 }
 
 .total-per::placeholder {
