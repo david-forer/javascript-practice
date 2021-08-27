@@ -1,89 +1,46 @@
-let billAmount = document.getElementById('billAmount').value
-let tipAmount = document.getElementById('tipAmount')
+// let billAmount = document.getElementById("billAmount").value;
+// let tipAmount = document.getElementById("tipAmount");
+// let customInput = document.getElementById("customInput").value;
 
-console.log(billAmount)
+// console.log(billAmount);
 
-
-function tip5() {
+function tip(percentage) {
   let bill = Number(document.getElementById("billAmount").value);
-  console.log(bill)
+  console.log(bill);
 
   let people = Number(document.getElementById("people").value);
-console.log(people)
+  console.log(people);
 
-  let tip = Number(bill / people * .05) ;
+  let tip = Number((bill / people) * percentage);
   document.getElementById("tip").value = tip.toFixed(2);
-  console.group(tip)
+  console.group(tip);
 
-  let total = Number(bill/people + tip);
+  let total = Number(bill / people + tip);
   document.getElementById("total-amount").value = total.toFixed(2);
-  console.log(total)
-
-}
-
-function tip10() {
-  let bill = Number(document.getElementById("billAmount").value);
-  console.log(bill)
-
-  let people = Number(document.getElementById("people").value);
-console.log(people)
-
-  let tip = Number(bill / people * .10) ;
-  document.getElementById("tip").value = tip.toFixed(2);
-  console.group(tip)
-
-  let total = Number(bill/people + tip);
-  document.getElementById("total-amount").value = total.toFixed(2);
-  console.log(total)
-
+  console.log(total);
 }
 
 
-function tip15() {
+function customTip() {
   let bill = Number(document.getElementById("billAmount").value);
-  console.log(bill)
+  console.log(bill);
 
   let people = Number(document.getElementById("people").value);
-console.log(people)
+  console.log(people);
 
-  let tip = Number(bill / people * .15) ;
+  let input = Number(document.getElementById('customInput').value)
+  // input.addEventListener('input', tip);
+  console.log(input)
+
+  let tip = Number((bill / people) * input);
   document.getElementById("tip").value = tip.toFixed(2);
-  console.group(tip)
+  console.group(tip);
 
-  let total = Number(bill/people + tip);
+  let total = Number(bill / people + tip);
   document.getElementById("total-amount").value = total.toFixed(2);
-  console.log(total)
-
+  console.log(total);
 }
-function tip25() {
-  let bill = Number(document.getElementById("billAmount").value);
-  console.log(bill)
 
-  let people = Number(document.getElementById("people").value);
-console.log(people)
-
-  let tip = Number(bill / people * .25) ;
-  document.getElementById("tip").value = tip.toFixed(2);
-  console.group(tip)
-
-  let total = Number(bill/people + tip);
-  document.getElementById("total-amount").value = total.toFixed(2);
-  console.log(total)
-
-}
-function tip50() {
-  let bill = Number(document.getElementById("billAmount").value);
-  console.log(bill)
-
-  let people = Number(document.getElementById("people").value);
-console.log(people)
-
-  let tip = Number(bill / people * .50) ;
-  document.getElementById("tip").value = tip.toFixed(2);
-  console.group(tip)
-
-  let total = Number(bill/people + tip);
-  document.getElementById("total-amount").value = total.toFixed(2);
-  console.log(total)
-
+function resetPage() {
+  location.reload();
 }
