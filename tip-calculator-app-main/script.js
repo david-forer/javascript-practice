@@ -1,8 +1,11 @@
 // let billAmount = document.getElementById("billAmount").value;
-// let tipAmount = document.getElementById("tipAmount");
+let tipAmount = document.getElementById("tipAmount");
+// let peopleAmount = document.getElementById("people").value
 // let customInput = document.getElementById("customInput").value;
 
 // console.log(billAmount);
+
+
 
 function tip(percentage) {
   let bill = Number(document.getElementById("billAmount").value);
@@ -18,6 +21,7 @@ function tip(percentage) {
   let total = Number(bill / people + tip);
   document.getElementById("total-amount").value = total.toFixed(2);
   console.log(total);
+
 }
 
 
@@ -28,7 +32,7 @@ function customTip() {
   let people = Number(document.getElementById("people").value);
   console.log(people);
 
-  let input = Number(document.getElementById('customInput').value / 10)
+  let input = Number(document.getElementById('customInput').value / 100)
   // input.addEventListener('input', tip);
   console.log(input)
 
@@ -40,15 +44,22 @@ function customTip() {
   document.getElementById("total-amount").value = total.toFixed(2);
   console.log(total);
 
-  // function validate() {
-  //   let x = document.getElementById("billAmount").value
-  //   console.log(x)
-  // }
+
 }
 
-function validate() {
-  let x = document.getElementById("billAmount").value
-  console.log(x)
+
+function validateInput() {
+  let billAmount = document.getElementById("billAmount").value;
+  let peopleAmount = document.getElementById("people").value
+  if (billAmount == '') {
+    let text = "this is required";
+    document.getElementById("valid").innerHTML = text;
+  }
+  if (peopleAmount == '') {
+    let text = "this is required";
+    document.getElementById("validate").innerHTML = text;
+  }
+  
 }
 
 function resetPage() {

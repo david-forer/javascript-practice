@@ -19,43 +19,71 @@
       <div class="tip-container">
         <div class="left-container">
           <div class="top">
-            <h3>Bill</h3>
+            <div class="validation"><h3>Bill</h3><p id="valid"></p></div>
             <input
               type="number"
               id="billAmount"
               class="input-bill"
               placeholder="30.00"
+              min="0"
+              
             />
           </div>
           <div class="bottom">
-            <h3>Number of People</h3>
-            <input type="number" id="people" class="input-people" placeholder="2" />
+            <div class="validation"><h3>Number of People</h3><p id="validate"></p></div>
+            <input
+              type="number"
+              id="people"
+              class="input-people"
+              placeholder="2"
+              min="0"
+            />
           </div>
           <div class="middle">
             <h3>Select Tip %</h3>
             <div class="tip-buttons">
-              <button class="button" id="tipAmount" onclick="tip(.05)">5%</button>
-              <button class="button" id="tipAmount" onclick="tip(.10)">10%</button>
-              <button class="button" id="tipAmount" onclick="tip(.15)">15%</button>
-              <button class="button" id="tipAmount" onclick="tip(.20)" >20%</button>
-              <button class="button" id="tipAmount" onclick="tip(.25)" >25%</button>
-              <input class="btn-input" id="customInput" placeholder="amount" onkeydown="customTip()"/>
+              <button class="button" id="tipAmount" onclick="tip(.05); validateInput()">
+                5%
+              </button>
+              <button class="button" id="tipAmount" onclick="tip(.10); validateInput()">
+                10%
+              </button>
+              <button class="button" id="tipAmount" onclick="tip(.15); validateInput()">
+                15%
+              </button>
+              <button class="button" id="tipAmount" onclick="tip(.20); validateInput()">
+                20%
+              </button>
+              <button class="button" id="tipAmount" onclick="tip(.25); validateInput()">
+                25%
+              </button>
+              <input
+                class="btn-input"
+                id="customInput"
+                placeholder="amount"
+                onkeydown="customTip(); validateInput()"
+              />
             </div>
           </div>
-          
         </div>
         <div class="right-container">
           <div id="tip-amount">
             <h3>Tip Amount</h3>
             <p>/ person</p>
-            <h1 id="tip-person">$<input id="tip" class="tippy" placeholder='0.00' /></h1>
+            <h1 id="tip-person">
+              $<input id="tip" class="tippy" placeholder="0.00" />
+            </h1>
           </div>
           <div id="total">
             <h3>Total</h3>
             <p>/ person</p>
-            <h1 id="total-person">$<input id="total-amount" class="total-per" placeholder="0.00" /></h1>
+            <h1 id="total-person">
+              $<input id="total-amount" class="total-per" placeholder="0.00" />
+            </h1>
           </div>
-          <button id="reset" class="reset-btn" onclick="resetPage()">RESET</button>
+          <button id="reset" class="reset-btn" onclick="resetPage()">
+            RESET
+          </button>
         </div>
       </div>
     </div>

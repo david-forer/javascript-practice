@@ -172,3 +172,17 @@ input:focus {
 .total-per::placeholder {
   color: #26c0ab;
 }
+
+.validation {
+  display: flex;
+  justify-content: space-between;
+   /* vertical-align: top; */
+}
+
+#valid {
+color: red;
+}
+
+#validate {
+  color: red;
+}
