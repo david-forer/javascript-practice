@@ -28,7 +28,7 @@ function customTip() {
   let people = Number(document.getElementById("people").value);
   console.log(people);
 
-  let input = Number(document.getElementById('customInput').value)
+  let input = Number(document.getElementById('customInput').value / 10)
   // input.addEventListener('input', tip);
   console.log(input)
 
@@ -39,6 +39,16 @@ function customTip() {
   let total = Number(bill / people + tip);
   document.getElementById("total-amount").value = total.toFixed(2);
   console.log(total);
+
+  // function validate() {
+  //   let x = document.getElementById("billAmount").value
+  //   console.log(x)
+  // }
+}
+
+function validate() {
+  let x = document.getElementById("billAmount").value
+  console.log(x)
 }
 
 function resetPage() {
